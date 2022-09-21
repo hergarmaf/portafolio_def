@@ -1,0 +1,333 @@
+*{ /*El asterisco engloba todos los elementos del html, siempre que no tengan otra declaración*/
+    box-sizing: border-box; /*esta propiedad
+    hace que los elementos dentro de un padding o un margen no creescan mas alla de esos limites*/
+}
+
+html:hover{
+    scroll-behavior: smooth ; /*se vera el dezplazamiento de enlaces dentro de la misma pagina*/
+}
+
+h1{ font-size: 3.5em; /*em es mejor para paginas responsivas que px*/
+}
+h2{ font-size: 2.7em; /*Aqui pretendo poner un estilo general a elementos basicos en el html*/
+}
+h3{ font-size: 2em;
+}
+p{ font-size: 1.25em;
+}
+
+li{ font-size: 1.25em;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    /*****margin: 0; --> con esto la pagina cubre completamente la pantalla*/
+    /*me gusto mas sin el margin: 0;*/
+}
+
+button{
+    font-size: 1.25em;  /*caracterizticas generales de los botones en la pagina*/
+    font-weight: bolder;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 5px solid rgba(50, 94, 189, 0.979);
+    box-shadow: 2px 2px 10px rgba(0,0,0,1);
+    color: white;
+    background-color: rgb(100, 116, 207);
+}
+
+button:hover{/*color del cual se ilumina el boton cuando se pone el cursor*/
+    background-color:  rgb(40, 56, 146);
+}
+
+.container{
+    max-width: 1400px; /*la anchura de 1400px es para que el contenido se quede centrado en pantallas mas allá de ese pixelage*/
+    
+}
+
+header{
+    
+    background-color: rgb(225,225,225); /*heder color fondo*/
+    
+}
+
+header .name{
+    
+    margin: 0; /*Para que mi nombre se pegue hacia arriba, al mismo nivel que nav*/
+    padding: 10px 30px; /*recordar que los primeros px de padding son verticales, y los segundos horizontales*/
+    font-weight: bold;
+    color: rgb(0, 0, 0);/*el pading del class name inclye el nav, por eso en pantallas grandes se distribuyen a la orilla, y cuando se hace mas chica, se aprecia mas la distrobución de columnas*/
+    font-size: 1.6em;
+}
+
+header .container{ /*flexbox1*/
+    display: flex;
+    flex-direction: column; /*me pone el eje que siguen los elementos en vertical*/
+    align-items: center;
+}
+
+header nav{ /*flexbox2*/
+    
+    display: flex; /*disposición de menu inicio/sobremi/contacto */
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+header a{
+    padding: 5px 12px; /*Estilos de los enlaces de nav*/
+    text-decoration: solid;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(41, 116, 201);/*Se iluminan las letras del menu*/
+}
+
+#inicio{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /*me pone el eje principal en columna*/
+    height: 120vh; /*tamaño de la flexbox*/
+    background-image: linear-gradient( /*este linear gradient le da contraste a las letras con el fondo, el uno al final del "vector" es la opacidad de la imagen*/
+        0deg,/* el 0deg es un gradiente que permite que la transcicion de colores sea mas suave y use menos ancho de banda*/
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.1)
+    )
+    ,url("../src/inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /*cubre todo el flexbox*/
+    background-position: center center;
+    
+}
+
+#inicio h1{
+    color: white;
+    
+}
+
+#experiencia{
+    background-image: linear-gradient( /*este linear gradient le da contraste a las letras con el fondo, el uno al final del "vector" es la opacidad de la imagen*/
+    0deg,/* el 0deg es un gradiente que permite que la transcicion de colores sea mas suave y use menos ancho de banda*/
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.1)
+)
+,url("https://wallpaperaccess.com/full/1216417.jpg");
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+
+}
+
+#experiencia .container{
+    text-align: center;
+    padding: 100px 12px;
+}
+
+
+#experiencia .seccion{
+    
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 10px; /*Este padding hace que cuando la pantalla es mas chica, los elementos se vean centrados en sus cajas*/
+    margin: 30px;
+    border-radius: 15px;
+}
+
+#sobremi p{color: rgb(0,0,0); font-weight: bolder;}
+
+#sobremi {
+    display: flex;
+    background-color: rgb(170, 68, 238);
+    background-image: linear-gradient( /*este linear gradient le da contraste a las letras con el fondo, el uno al final del "vector" es la opacidad de la imagen*/
+    0deg,/* el 0deg es un gradiente que permite que la transcicion de colores sea mas suave y use menos ancho de banda*/
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.1)
+)
+,url("https://papers.co/wallpaper/papers.co-vx48-noise-simple-minimal-blue-soft-pastel-pattern-background-28-wallpaper.jpg");
+    text-align: center;
+    padding: 150px 150px;
+    background-image: cover;
+}
+
+#sobremi .enlaces{ 
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 800px;
+}
+
+#sobremi a{
+    font-weight: bolder;
+    font-size: medium; 
+    color: rgb(6, 66, 90);
+}
+
+#caracteristicas .container{
+    
+    text-align: center;
+    padding: 65px 12px;
+}
+
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient( /*este linear gradient le da contraste a las letras con el fondo, el uno al final del "vector" es la opacidad de la imagen*/
+    0deg,/* el 0deg es un gradiente que permite que la transcicion de colores sea mas suave y use menos ancho de banda*/
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.1)
+    ),url("../src/dos.png");
+    color: white;
+    height: 130vh;
+    
+}
+
+#contacto h2{
+    font-size: 9vw;
+}
+
+#contacto .contenedor{
+    background-position: center center;
+    background-size: cover;
+    padding: 15px 0px;
+    margin: 15;
+    border-radius: 15px;
+}
+
+#contacto label{
+    display: table-row;
+    justify-content: flex-start;
+    font-size: 1.250em;
+    font-weight: bolder; 
+    
+
+}
+
+
+
+
+footer{
+    background-color: rgb(0,0,0);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(54, 123, 180);
+}
+
+footer .container{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media screen and (min-width: 740px){ /* cuando el ancho de la pantalla supere los 850px se aplican los estilos dentro de este media query*/
+    header{
+        position: fixed; /*mi header con el nav se quedaran fijos cuando scrolleamos,*/
+        width: 100%;  
+    }
+
+    header .container{ 
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0; 
+        padding-right: 20px;
+    }
+
+    #inicio h1{
+        font-size: 5em;
+    }
+
+    #sobremi .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #sobremi .texto{
+        width: 50%;
+        max-width: 600px; /*para que no se estire hasta el finañ en pantallas mas grandes*/
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; /*hace espacios iguales entre los bolrdes y los elementos del flexbox*/
+    }
+
+    #sobremi h2{
+        margin-top: 0px; /*para que el h2 quede mas centrado*/
+    }
+
+    #sobremi .enlaces{
+       
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #experiencia .categorias{
+        display: flex;
+        justify-content: center;
+    }
+
+    #experiencia p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #experiencia h2{
+        font-size: 4em;
+    }
+
+    #experiencia h3{
+        margin-top: 0;
+    }
+
+    #experiencia .seccion{  
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #contacto h2{
+        font-size: 50px;
+
+    }
+
+    #contacto button{
+        font-size: 20px;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+
